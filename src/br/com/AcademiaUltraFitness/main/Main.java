@@ -1,26 +1,21 @@
-package br.com.AcademiaUltraFitness.main;
+package br.com.academiaultrafitness.main;
 
-import br.com.AcademiaUltraFitness.Atleta;
-import br.com.AcademiaUltraFitness.Pessoa;
+import br.com.academiaultrafitness.Atleta;
+import br.com.academiaultrafitness.Pessoa;
 
 public class Main {
-                                                                
 
-	public static void main(String[] args) {
-		
-		Pessoa objnormal =new Pessoa ("Davi",(float)66.5,(float)1.75,19);
-		objnormal.informacaoPessoa();
-		 System.out.printf("IMC da pessoa: %.2f%n", objnormal.imc());
-		 
-		System.out.println("============Atleta==============");
-		
-		Atleta objjudoca =new Atleta ("Lucas",(float) 80,(float) 1.80, 20, "Judo");
-		objjudoca.informacaoPessoa();
-		objjudoca.Esporte();
-		System.out.printf("IMC do atleta ajustado: %.2f%n", objjudoca.imc());
-		
-		
+    public static void main(String[] args) {
 
-	}
+        Pessoa pessoa = new Pessoa("Davi", 66.5f, 1.75f, 19);
+        pessoa.informacaoPessoa();
+        System.out.println("IMC da pessoa: " + String.format("%.2f", pessoa.imc()));
 
+        System.out.println("\n============ Atleta ============");
+
+        Atleta atleta = new Atleta("Lucas", 80.0f, 1.80f, 20, "Judo");
+        atleta.informacaoPessoa();
+        atleta.exibirEsporte();
+        System.out.println("IMC do atleta ajustado: " + String.format("%.2f", atleta.imc()));
+    }
 }
